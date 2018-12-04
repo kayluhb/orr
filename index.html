@@ -12,8 +12,13 @@
         box-sizing: inherit;
       }
 
+      /*
+        $color-background: rgb(254, 247, 246);
+        $color-red: #CB2C18;
+        $color-default: #111;
+      */
+
       html {
-        line-height: 1.15;
         -webkit-text-size-adjust: 100%;
         box-sizing: border-box;
         font-size: 100%;
@@ -41,19 +46,43 @@
         text-decoration: none;
       }
 
-      h1,
+      h1 {
+        color: #CB2C18;
+        font-family: serif;
+      }
+
+      h2 {
+        font-family: serif;
+      }
+
       h2,
       h3,
       h4,
       h5,
       h6 {
-        color: #CB2C18;
+        color: #111;
+      }
+
+      ::selection {
+        background: rgba(203, 44, 24, .68);
+        color: #111;
       }
 
       .main-wrap {
         margin: 0 auto;
         max-width: 1280px;
-        padding: 0 120px;
+        padding: 53px 120px 0;
+      }
+
+      .nav {
+        margin-bottom: 10px;
+        text-align: right;
+      }
+
+      .nav a {
+        color: #CB2C18;
+        font-weight: bold;
+        font-size: 14px;
       }
 
       .main {
@@ -62,22 +91,41 @@
         padding: 84px 88px 80px;
       }
 
+      .main-cols {
+        display: flex;
+        position: relative;
+      }
+
+      .date {
+        font-weight: bold;
+        font-size: 10px;
+        text-transform: uppercase;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 0;
+        left: -40px;
+      }
+
       .side-projects {
         margin: 0 auto 165px;
         max-width: 682px;
       }
+
+      * {
+        outline: 1px dotted red;
+      }
     </style>
   </head>
   <body>
-    <nav>
-      <a href="">Design leader</a>, <a href="">food writer</a>, <a href="">consummate host</a>
-    </nav>
     <div class="main-wrap">
+      <nav class="nav">
+        <a href="">Design leader</a>, <a href="">food writer</a>, <a href="">consummate host</a>
+      </nav>
       <main class="main">
         <h1>Orr Shtuhl</h1>
         <h2>Head of Product Design, Wirecutter</h2>
-        <div>
-          <h3>2017 – present</h3>
+        <div class="main-cols">
+          <h3 class="date">2017 – present</h3>
           <div>
             <p>
               I provide leadership, strategy, and hands-on design to shape the user experience of Wirecutter.com. I was the company's first product designer, and I built the team from the ground up.
@@ -137,7 +185,9 @@
       </main>
     </div>
     <section>
-      <h1><div>Side</div> </div>Projects</h1></h1>
+      <div class="main-wrap">
+        <h1><div>Side</div> <div>Projects</div></h1>
+      </div>
       <div class="side-projects">
         <p>I write and speak about food and drink — I especially love interviewing people. Lately I've been exploring the intersection of food and identity.</p>
         <h2>Hosting + speaking</h2>
