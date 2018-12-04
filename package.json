@@ -1,0 +1,9 @@
+{
+  "name": "orr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:kayluhb/orr.git",
+  "author": "Caleb Brown <kayluhb@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
