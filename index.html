@@ -161,7 +161,7 @@
       }
 
       .main-cols--present {
-        margin-bottom: 107px;
+        margin-bottom: 133px;
       }
 
       .main-col-2 {
@@ -219,21 +219,69 @@
         position: relative;
       }
 
-      .aside-title::before {
+      .icon-title {
+        position: relative;
+      }
+
+      .icon-title::before {
+        background: no-repeat;
+        content: '';
         position: absolute;
+        left: 0;
+      }
+
+      .aside-title::before {
+        background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg width='18' height='5' viewBox='0 0 18 5' xmlns='http://www.w3.org/2000/svg'%3e%3cline x1='2.5' y1='2.5' x2='15.5' y2='2.5' stroke='%23CB2C18' stroke-width='5' stroke-linecap='round'/%3e%3c/svg%3e ");
         width: 18px;
         height: 5px;
-        left: 0;
         top: -13px;
-        content: '';
-
-        background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg width='18' height='5' viewBox='0 0 18 5' xmlns='http://www.w3.org/2000/svg'%3e%3cline x1='2.5' y1='2.5' x2='15.5' y2='2.5' stroke='%23CB2C18' stroke-width='5' stroke-linecap='round'/%3e%3c/svg%3e ");
       }
 
       .aside-copy {
         line-height: 26px;
         font-size: 18px;
         letter-spacing: 0.01em;
+        margin-bottom: 19px;
+      }
+
+      .recognition {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .recognition-title {
+        font-style: italic;
+        line-height: 41px;
+        font-size: 46px;
+        margin-right: 24px;
+        width: 177px;
+      }
+
+      .recognition p {
+        line-height: 25px;
+        font-size: 19px;
+      }
+
+      .recognition-title::before {
+        height: 9px;
+        width: 16px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.932 3.144l1.523 5.14A1 1 0 0 0 3.413 9h9.174a1 1 0 0 0 .959-.716l1.523-5.14c.28-.947-.835-1.684-1.596-1.055l-1.386 1.145a1 1 0 0 1-1.393-.117L8.757.876a1 1 0 0 0-1.514 0L5.306 3.117a1 1 0 0 1-1.393.117L2.527 2.089C1.767 1.46.651 2.197.932 3.144z' fill='%23CB2C18'/%3E%3C/svg%3E");
+        left: 2px;
+        top: -15px;
+      }
+
+      .recognition-col {
+        margin-top: -8px;
+        width: 158px;
+      }
+
+      .recognition-subtitle {
+        font-family: 'Karla', sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 17px;
+        font-size: 13px;
+        margin: 0 0 10px;
       }
 
       .side-projects {
@@ -280,18 +328,28 @@
             </p>
           </div>
           <div class="main-col-1">
-            <h4 class="aside-title">I blend journalism and design</h4>
+            <h4 class="icon-title aside-title">I blend journalism and design</h4>
             <p class="aside-copy">By day, I use my background in journalism to bring curiosity and clarity to people's real-world problems. By night, I apply design thinking to my side projects in food writing and education.</p>
           </div>
         </div>
-        <section>
-          <h2>Industry recognition</h2>
-          <h4>SPOKEN AT</h4>
-          <p><a href="http://google.com">Design Systems NYC Design Driven NYC SXSW</a></p>
-          <h4>Profiled IN</h4>
-          <p><a href="http://google.com">Fast Company</a></p>
-          <h4>WRITTEN FOR</h4>
-          <p><a href="http://google.com">A List Apart</a></p>
+        <section class="recognition">
+          <h2 class="icon-title recognition-title">Industry recognition</h2>
+          <div class="recognition-col">
+            <h4 class="recognition-subtitle">SPOKEN AT</h4>
+            <p>
+              <a href="http://google.com">Design Systems NYC</a><br>
+              <a href="http://google.com">Design Driven NYC</a><br>
+              <a href="http://google.com">SXSW</a>
+            </p>
+          </div>
+          <div class="recognition-col">
+            <h4 class="recognition-subtitle">Profiled IN</h4>
+            <p><a href="http://google.com">Fast Company</a></p>
+          </div>
+          <div class="recognition-col">
+            <h4 class="recognition-subtitle">WRITTEN FOR</h4>
+            <p><a href="http://google.com">A List Apart</a></p>
+          </div>
         </section>
         <section>
           <h2>Director of User Experience, Blenderbox</h2>
