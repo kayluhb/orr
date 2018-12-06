@@ -164,11 +164,11 @@
         margin-bottom: 133px;
       }
 
-      .main-col-2 {
+      .main-copy {
         width: calc(100% - 354px);
       }
 
-      .main-col-1 {
+      .main-col {
         width: 248px;
       }
 
@@ -187,12 +187,6 @@
 
       .shtuhl {
         margin-left: 2px;
-      }
-
-      .secondary {
-        font-size: 30px;
-        line-height: normal;
-        margin-bottom: 25px;
       }
 
       .main-copy p {
@@ -295,6 +289,65 @@
         margin: 0 0 10px;
       }
 
+      .bar {
+        display: flex; margin-bottom: 70px; height: 36px; width: calc(100% + 32px); margin-left: -16px;
+      }
+
+      .bar > :nth-child(1) {
+        border-bottom: 2px solid #111;
+        border-right: 2px solid #111;
+        height: 100%;
+        width: calc(100% - 428px);
+      }
+
+      .bar > :nth-child(2) {
+        border-top: 2px solid #111;
+        height: 100%;
+        width: 110px;
+      }
+
+      .bar > :nth-child(3) {
+         padding: 0 12px;
+         height: 100%;
+         width: 34px;
+         position: relative;
+      }
+
+      .bar > :nth-child(4) {
+        border-top: 2px solid #111;
+        height: 100%;
+        width: 110px;
+      }
+
+      .bar > :nth-child(5) {
+        border-bottom: 2px solid #111;
+        border-left: 2px solid #111;
+        height: 100%;
+        width: 194px;
+      }
+
+      .bar svg {
+         position: absolute;left: -2px;top: -19px;
+      }
+
+      .secondary-title {
+        font-size: 30px;
+        line-height: normal;
+        margin-bottom: 25px;
+      }
+
+      .secondary-copy {
+        padding-bottom: 72px;
+        width: calc(100% - 338px);
+      }
+
+      .secondary-copy p {
+        line-height: 29px;
+        font-size: 22px;
+        letter-spacing: 0.01em;
+        margin-bottom: 20px;
+      }
+
       .work-title {
         font-family: Karla;
         font-weight: normal;
@@ -305,7 +358,7 @@
       }
 
       .selected-clients {
-        margin-bottom: 48px;
+        margin-bottom: 72px;
       }
 
       .client {
@@ -319,9 +372,17 @@
         font-weight: bold;
         line-height: 18px;
         font-size: 14px;
-        margin-bottom: 0;
+        margin-bottom: 2px;
         text-transform: uppercase;
         color: #CB2C18;
+      }
+
+      .past {
+        margin-bottom: 29px;
+      }
+
+      .past:last-child {
+        margin-bottom: 0;
       }
 
       .past-subtitle {
@@ -329,10 +390,11 @@
         font-weight: normal;
         line-height: 15px;
         font-size: 12px;
+        margin: 0 0 3px;
       }
 
       .past-title {
-
+        margin: 0;
       }
 
       .side-projects {
@@ -340,9 +402,9 @@
         max-width: 682px;
       }
 
-/*      * {
+      * {
         outline: 1px dotted red;
-      }*/
+      }
     </style>
   </head>
   <body>
@@ -364,7 +426,7 @@
         <h2>Head of Product Design, Wirecutter</h2>
         <div class="main-cols main-cols--present">
           <h3 class="date">2017 – present</h3>
-          <div class="main-col-2 main-copy">
+          <div class="main-copy">
             <p>
               I provide leadership, strategy, and hands-on design to shape the user experience of Wirecutter.com. I was the company's first product designer, and I built the team from the ground up.
             </p>
@@ -378,7 +440,7 @@
               I'm a passionate coach, and I empower product designers through design feedback, guidance, and mentoring. I also recruit for my team, and I started a series of male allies discussions at the company. More broadly, I contribute to design leadership at The Times, writing new cross-team practices and organizing talks in the design community.
             </p>
           </div>
-          <div class="main-col-1">
+          <div class="main-col">
             <h4 class="icon-title aside-title">I blend journalism and design</h4>
             <p class="aside-copy">By day, I use my background in journalism to bring curiosity and clarity to people's real-world problems. By night, I apply design thinking to my side projects in food writing and education.</p>
           </div>
@@ -402,22 +464,22 @@
             <p><a href="http://google.com">A List Apart</a></p>
           </div>
         </section>
-        <div class="bar" style="display: flex; margin-bottom: 70px; height: 36px; width: calc(100% + 32px); margin-left: -16px;">
-          <div style="border-bottom: 2px solid #111;border-right: 2px solid #111; height: 100%; width: calc(100% - 428px);"></div>
-          <div style="border-top: 2px solid #111; height: 100%; width: 110px;"></div>
-          <div style="padding: 0 12px; height: 100%; width: 34px; position: relative;">
-            <svg width="35" height="42" viewBox="0 0 35 42" fill="none" style="position: absolute;left: -2px;top: -19px;">
+        <div class="bar" >
+          <div></div>
+          <div></div>
+          <div>
+            <svg width="35" height="42" viewBox="0 0 35 42" fill="none">
               <path d="M7.75332 11.0724L5.3469 29.0724C4.78578 33.2696 8.05066 37 12.2852 37H22.7148C26.9493 37 30.2142 33.2696 29.6531 29.0724L27.2467 11.0724C26.7819 7.59587 23.8159 5 20.3084 5H14.6916C11.1841 5 8.2181 7.59587 7.75332 11.0724L12.7092 11.735L7.75332 11.0724Z" fill="#CB2C18" stroke="#FFF7F6" stroke-width="10"/>
             </svg>
           </div>
-          <div style="border-top: 2px solid #111; height: 100%; width: 110px;"></div>
-          <div style="border-bottom: 2px solid #111;border-left: 2px solid #111; height: 100%; width: 194px;"></div>
+          <div></div>
+          <div></div>
         </div>
-        <section>
-          <h2 class="secondary">Director of User Experience, Blenderbox</h2>
+        <section class="secondary">
+          <h2 class="secondary-title">Director of User Experience, Blenderbox</h2>
           <div class="main-cols">
             <h3 class="date">2011 – 2017</h3>
-            <div class="main-col-2">
+            <div class="secondary-copy">
               <p>
                 I managed UX resources for a $3M pipeline, and hired and established a 4-person UX team. In my proudest accomplishment, I introduced product strategy and design as a new capability to the agency, which led to major engagements — when I left in 2017, accounted for more than 30% of annual revenue.
               </p>
@@ -428,7 +490,7 @@
                 Day to day, I advised clients on strategy and did the gamut of UX work. I wrote goals and check-ins for direct reports, and mentored mid- and entry-level designers. (I joined the company as a UX designer in 2011 and was promoted to director in 2013.)
               </p>
             </div>
-            <div class="main-col-1">
+            <div class="main-col">
               <div class="selected-clients">
                 <h3 class="work-title">Selected Clients</h3>
                 <div class="client">
