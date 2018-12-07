@@ -15,6 +15,9 @@
     <meta name="msapplication-config" content="/orr/browserconfig.xml">
     <meta name="theme-color" content="#fff7f6">
     <style>
+      /** {
+        outline: 1px dotted red;
+      }*/
       /* Fonts */
       @font-face {
         font-display: auto;
@@ -67,23 +70,24 @@
       */
 
       html {
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
         box-sizing: border-box;
         font-size: 100%;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
         overflow-y: auto;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
       }
 
       body {
-        background: #FFF7F6 center top no-repeat;
-        background-image:  url('overlay.png');
-        color: #111;
-        font-size: 22px;
-        font-family: 'goudy', serif;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
+        background: #FFF7F6 center top no-repeat;
+        background-image: url('overlay.png');
+        background-image: none;
+        color: #111;
+        font-family: 'goudy', serif;
+        font-size: 22px;
         margin: 0;
       }
 
@@ -110,8 +114,8 @@
       }
 
       h2 {
-        margin-bottom: 27px;
         line-height: 1;
+        margin-bottom: 27px;
       }
 
       ::selection {
@@ -121,13 +125,13 @@
 
       /* Nav */
       .nav {
-        font-family: 'karla', sans-serif;
-        height: 80px;
-        font-size: 14px;
-        line-height: 1;
-        display: flex;
-        justify-content: flex-end;
         align-items: flex-end;
+        display: flex;
+        font-family: 'karla', sans-serif;
+        font-size: 14px;
+        height: 80px;
+        justify-content: flex-end;
+        line-height: 1;
         padding-bottom: 11px;
       }
 
@@ -148,7 +152,6 @@
         display: block;
         padding: 112px 85px 80px;
         position: relative;
-
       }
 
       .main::after {
@@ -162,8 +165,8 @@
       }
 
       .main-cols {
-        display: flex;
         align-items: flex-end;
+        display: flex;
         justify-content: space-between;
         position: relative;
       }
@@ -198,8 +201,8 @@
       }
 
       .main-subtitle {
-        font-weight: normal;
         font-size: 39px;
+        font-weight: normal;
         letter-spacing: 0.015em;
         line-height: 1;
       }
@@ -213,21 +216,21 @@
 
       .date {
         font-family: 'karla', sans-serif;
-        font-weight: 700;
         font-size: 10px;
-        text-transform: uppercase;
-        transform: rotate(-90deg) translateY(100%);
-        position: absolute;
-        top: 2px;
+        font-weight: 700;
         height: 0;
-        width: 0;
         left: -40px;
+        position: absolute;
+        text-transform: uppercase;
+        top: 2px;
+        transform: rotate(-90deg) translateY(100%);
         white-space: nowrap;
+        width: 0;
       }
 
       .date div {
-        position: absolute;
         left: 0;
+        position: absolute;
         top: 0;
         transform: translateX(-100%);
       }
@@ -239,8 +242,8 @@
       .icon-title::before {
         background: no-repeat;
         content: '';
-        position: absolute;
         left: 0;
+        position: absolute;
       }
 
       /* Aside */
@@ -255,15 +258,15 @@
 
       .aside-title::before {
         background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg width='18' height='5' viewBox='0 0 18 5' xmlns='http://www.w3.org/2000/svg'%3e%3cline x1='2.5' y1='2.5' x2='15.5' y2='2.5' stroke='%23CB2C18' stroke-width='5' stroke-linecap='round'/%3e%3c/svg%3e ");
-        width: 18px;
         height: 5px;
         top: -13px;
+        width: 18px;
       }
 
       .aside-copy {
-        line-height: 26px;
         font-size: 18px;
         letter-spacing: 0.01em;
+        line-height: 26px;
         margin-bottom: 19px;
       }
 
@@ -275,24 +278,24 @@
       }
 
       .recognition-title {
+        font-size: 46px;
         font-style: italic;
         line-height: 41px;
-        font-size: 46px;
         margin-right: 24px;
         width: 177px;
       }
 
       .recognition p {
-        line-height: 25px;
         font-size: 19px;
+        line-height: 25px;
       }
 
       .recognition-title::before {
-        height: 9px;
-        width: 16px;
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.932 3.144l1.523 5.14A1 1 0 0 0 3.413 9h9.174a1 1 0 0 0 .959-.716l1.523-5.14c.28-.947-.835-1.684-1.596-1.055l-1.386 1.145a1 1 0 0 1-1.393-.117L8.757.876a1 1 0 0 0-1.514 0L5.306 3.117a1 1 0 0 1-1.393.117L2.527 2.089C1.767 1.46.651 2.197.932 3.144z' fill='%23CB2C18'/%3E%3C/svg%3E");
+        height: 9px;
         left: 2px;
         top: -15px;
+        width: 16px;
       }
 
       .recognition-col {
@@ -306,11 +309,11 @@
 
       .recognition-subtitle {
         font-family: 'Karla', sans-serif;
-        text-transform: uppercase;
+        font-size: 13px;
         font-weight: bold;
         line-height: 17px;
-        font-size: 13px;
         margin: 0 0 10px;
+        text-transform: uppercase;
       }
 
       /* Bar */
@@ -332,10 +335,10 @@
       }
 
       .bar > :nth-child(3) {
-         padding: 0 12px;
          height: 100%;
-         width: 34px;
+         padding: 0 12px;
          position: relative;
+         width: 34px;
       }
 
       .bar > :nth-child(4) {
@@ -368,18 +371,18 @@
       }
 
       .secondary-copy p {
-        line-height: 29px;
         font-size: 22px;
         letter-spacing: 0.01em;
+        line-height: 29px;
         margin-bottom: 20px;
       }
 
       /* Secondary aside */
       .work-title {
         font-family: Karla;
+        font-size: 14px;
         font-weight: normal;
         line-height: 18px;
-        font-size: 14px;
         margin-bottom: 22px;
         text-transform: uppercase;
       }
@@ -395,13 +398,13 @@
       }
 
       .client-title {
+        color: #CB2C18;
         font-family: Karla;
+        font-size: 14px;
         font-weight: bold;
         line-height: 18px;
-        font-size: 14px;
         margin-bottom: 2px;
         text-transform: uppercase;
-        color: #CB2C18;
       }
 
       .past {
@@ -414,29 +417,29 @@
 
       .past-subtitle {
         font-family: Karla;
+        font-size: 12px;
         font-weight: normal;
         line-height: 15px;
-        font-size: 12px;
         margin: 0 0 3px;
       }
 
       .past-title {
-        margin: 0;
-        line-height: 25px;
         font-size: 19px;
+        line-height: 25px;
+        margin: 0;
       }
 
       /* Side Projects */
       .side-projects-header {
         display: flex;
-        justify-content: space-between;
         height: 86px;
+        justify-content: space-between;
       }
 
       .side-projects-header-divider {
+        background: #CB2C18;
         height: 3px;
         margin-top: 37px;
-        background: #CB2C18;
         width: calc(100% - 440px);
       }
 
@@ -452,25 +455,25 @@
       }
 
       .side-projects {
-        margin: 0 auto 165px;
         font-family: 'karla', sans-serif;
+        margin: 0 auto 165px;
         max-width: 682px;
       }
 
       .side-projects-description {
+        color: #CB2C18;
+        font-size: 15px;
         font-weight: bold;
         line-height: 21px;
-        font-size: 15px;
-        color: #CB2C18;
         margin: 0 0 47px;
         padding: 0 100px 0 0;
       }
 
       .side-projects-title {
         color: #CB2C18;
+        font-size: 22px;
         font-weight: bold;
         line-height: 31px;
-        font-size: 22px;
         margin: 0 0 13px;
       }
 
@@ -485,8 +488,8 @@
       }
 
       .side-project-col-wide p {
-        line-height: 26px;
         font-size: 17px;
+        line-height: 26px;
         margin-bottom: 15px;
       }
 
@@ -501,17 +504,17 @@
 
       /* Get in touch */
       .side-project-aside-title {
+        color: #CB2C18;
+        font-size: 14px;
         font-weight: bold;
         line-height: 18px;
-        font-size: 14px;
-        text-transform: uppercase;
         margin: 3px 0 10px;
-        color: #CB2C18;
+        text-transform: uppercase;
       }
 
       .side-project-aside-copy {
-        line-height: 21px;
         font-size: 15px;
+        line-height: 21px;
         margin-bottom: 20px;
       }
 
@@ -520,11 +523,11 @@
       }
 
       .side-project-aside-title-alt {
+        font-size: 14px;
         font-weight: normal;
         line-height: 18px;
-        font-size: 14px;
-        text-transform: uppercase;
         margin: 6px 0 22px;
+        text-transform: uppercase;
       }
 
       .recent-writing .side-project-aside-title {
@@ -535,8 +538,8 @@
       .footer {
         color: #CB2C18;
         display: flex;
-        line-height: 20px;
         font-size: 14px;
+        line-height: 20px;
       }
 
       .footer-title {
@@ -547,10 +550,6 @@
       .footer a {
         color: #CB2C18;
         margin-left: 8px;
-      }
-
-      * {
-        outline: 1px dotted red;
       }
     </style>
   </head>
