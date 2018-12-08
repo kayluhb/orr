@@ -15,9 +15,9 @@
     <meta name="msapplication-config" content="/orr/browserconfig.xml">
     <meta name="theme-color" content="#fff7f6">
     <style>
-      /** {
-        outline: 1px dotted red;
-      }*/
+      * {
+        outline: 1px dotted green;
+      }
       /* Fonts */
       @font-face {
         font-display: auto;
@@ -135,6 +135,10 @@
         padding-bottom: 11px;
       }
 
+      .nav--mobile {
+        display: none;
+      }
+
       .nav a {
         color: #CB2C18;
         font-weight: 700;
@@ -143,8 +147,8 @@
       /* Main layout */
       .main-wrap {
         margin: 0 auto;
-        max-width: 1280px;
-        padding: 0 120px;
+        max-width: 1120px;
+        padding: 0 40px;
       }
 
       .main {
@@ -162,25 +166,6 @@
         left: 174px;
         position: absolute;
         width: calc(100% - 436px);
-      }
-
-      .main-cols {
-        align-items: flex-end;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-      }
-
-      .main-cols--present {
-        margin-bottom: 133px;
-      }
-
-      .main-copy {
-        width: calc(100% - 354px);
-      }
-
-      .main-col {
-        width: 248px;
       }
 
       .orr-shtuhl {
@@ -205,6 +190,25 @@
         font-weight: normal;
         letter-spacing: 0.015em;
         line-height: 1;
+      }
+
+      .main-cols {
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      .main-cols--present {
+        margin-bottom: 133px;
+      }
+
+      .main-copy {
+        width: calc(100% - 354px);
+      }
+
+      .main-col {
+        width: 248px;
       }
 
       .main-copy p {
@@ -552,6 +556,391 @@
         color: #CB2C18;
         margin-left: 8px;
       }
+
+      @media (max-width: 750px) {
+        body {
+          background-image: url('overlay-mobile.png');
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .nav--mobile {
+          display: block;
+          height: auto;
+          padding: 15px 0 0 32px;
+          margin-bottom: 124px;
+        }
+
+        .main-wrap {
+          padding: 115px 20px 0;
+        }
+
+        .main {
+          border: 0;
+          padding: 0;
+        }
+
+        .main::after {
+          display: none;
+        }
+
+        .orr-shtuhl {
+          margin: 0 0 0;
+        }
+
+        .orr {
+          margin: 0 0 12px 3px;
+          height: 63px;
+          width: 137px;
+        }
+
+        .shtuhl {
+          height: 63px;
+          margin-left: 34px;
+          width: 243px;
+        }
+
+        .main-subtitle {
+          font-size: 34px;
+          letter-spacing: 0;
+          line-height: normal;
+          margin-bottom: 8px;
+        }
+
+        .main-cols {
+          flex-direction: column;
+        }
+
+        .main-cols--present {
+          margin-bottom: 133px;
+        }
+
+        .main-copy,
+        .main-col {
+          width: 100%;
+        }
+
+        .main-copy {
+          margin-bottom: 61px;
+        }
+
+        .main-copy p {
+          font-size: 23px;
+          line-height: 30px;
+          margin-bottom: 22px;
+        }
+
+        .date {
+          font-size: 14px;
+          height: auto;
+          margin-bottom: 37px;
+          width: 100%;
+        }
+
+        .date,
+        .date div {
+          left: auto;
+          position: static;
+          top: auto;
+          transform: none;
+        }
+
+        /* Aside */
+        .aside-title {
+          line-height: 33px;
+          font-size: 25px;
+        }
+
+        .aside-copy {
+          font-size: 23px;
+          line-height: 30px;
+        }
+
+        /* Recognition */
+        .recognition {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 15px;
+        }
+
+        .recognition-title {
+          font-size: 46px;
+          font-style: italic;
+          line-height: 41px;
+          margin-right: 24px;
+          width: 177px;
+        }
+
+        .recognition p {
+          font-size: 19px;
+          line-height: 25px;
+        }
+
+        .recognition-title::before {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.932 3.144l1.523 5.14A1 1 0 0 0 3.413 9h9.174a1 1 0 0 0 .959-.716l1.523-5.14c.28-.947-.835-1.684-1.596-1.055l-1.386 1.145a1 1 0 0 1-1.393-.117L8.757.876a1 1 0 0 0-1.514 0L5.306 3.117a1 1 0 0 1-1.393.117L2.527 2.089C1.767 1.46.651 2.197.932 3.144z' fill='%23CB2C18'/%3E%3C/svg%3E");
+          height: 9px;
+          left: 2px;
+          top: -15px;
+          width: 16px;
+        }
+
+        .recognition-col {
+          margin-top: -8px;
+          width: 158px;
+        }
+
+        .recognition-col p {
+          margin-bottom: 0;
+        }
+
+        .recognition-subtitle {
+          font-family: 'Karla', sans-serif;
+          font-size: 13px;
+          font-weight: bold;
+          line-height: 17px;
+          margin: 0 0 10px;
+          text-transform: uppercase;
+        }
+
+        /* Bar */
+        .bar {
+          display: flex; margin-bottom: 70px; height: 36px; width: calc(100% + 32px); margin-left: -16px;
+        }
+
+        .bar > :nth-child(1) {
+          border-bottom: 2px solid #111;
+          border-right: 2px solid #111;
+          height: 100%;
+          width: calc(100% - 428px);
+        }
+
+        .bar > :nth-child(2) {
+          border-top: 2px solid #111;
+          height: 100%;
+          width: 110px;
+        }
+
+        .bar > :nth-child(3) {
+           height: 100%;
+           padding: 0 12px;
+           position: relative;
+           width: 34px;
+        }
+
+        .bar > :nth-child(4) {
+          border-top: 2px solid #111;
+          height: 100%;
+          width: 110px;
+        }
+
+        .bar > :nth-child(5) {
+          border-bottom: 2px solid #111;
+          border-left: 2px solid #111;
+          height: 100%;
+          width: 194px;
+        }
+
+        .bar svg {
+           position: absolute;left: -2px;top: -19px;
+        }
+
+        /* Secondary */
+        .secondary-title {
+          font-size: 30px;
+          line-height: normal;
+          margin-bottom: 25px;
+        }
+
+        .secondary-copy {
+          padding-bottom: 72px;
+          width: calc(100% - 338px);
+        }
+
+        .secondary-copy p {
+          font-size: 22px;
+          letter-spacing: 0.01em;
+          line-height: 29px;
+          margin-bottom: 20px;
+        }
+
+        /* Secondary aside */
+        .work-title {
+          font-family: Karla;
+          font-size: 14px;
+          font-weight: normal;
+          line-height: 18px;
+          margin-bottom: 22px;
+          text-transform: uppercase;
+        }
+
+        .selected-clients {
+          margin-bottom: 72px;
+        }
+
+        .client {
+          font-family: Karla;
+          font-size: 15px;
+          margin-bottom: 22px;
+        }
+
+        .client-title {
+          color: #CB2C18;
+          font-family: Karla;
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 18px;
+          margin-bottom: 2px;
+          text-transform: uppercase;
+        }
+
+        .past {
+          margin-bottom: 21px;
+        }
+
+        .past:last-child {
+          margin-bottom: 0;
+        }
+
+        .past-subtitle {
+          font-family: Karla;
+          font-size: 12px;
+          font-weight: normal;
+          letter-spacing: 0.02em;
+          line-height: 15px;
+          margin: 0 0 3px;
+        }
+
+        .past-title {
+          font-size: 19px;
+          line-height: 25px;
+          margin: 0;
+        }
+
+        /* Side Projects */
+        .side-projects-header {
+          display: flex;
+          height: 86px;
+          justify-content: space-between;
+        }
+
+        .side-projects-header-divider {
+          background: #CB2C18;
+          height: 3px;
+          margin-top: 37px;
+          width: calc(100% - 440px);
+        }
+
+        .side-projects-header-side {
+          padding: 19px 10px 0 0;
+          text-align: right;
+          width: 176px;
+        }
+
+        .side-projects-header-projects {
+          padding: 19px 0 0 10px;
+          width: 264px;
+        }
+
+        .side-projects {
+          font-family: 'karla', sans-serif;
+          margin: 0 auto 165px;
+          max-width: 682px;
+        }
+
+        .side-projects-description {
+          color: #CB2C18;
+          font-size: 15px;
+          font-weight: bold;
+          line-height: 21px;
+          margin: 0 0 47px;
+          padding: 0 100px 0 0;
+        }
+
+        .side-projects-title {
+          color: #CB2C18;
+          font-size: 22px;
+          font-weight: bold;
+          line-height: 31px;
+          margin: 0 0 13px;
+        }
+
+        .side-project-cols {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 64px;
+        }
+
+        .side-project-col-wide {
+          width: 420px;
+        }
+
+        .side-project-col-wide p {
+          font-size: 17px;
+          line-height: 26px;
+          margin-bottom: 15px;
+        }
+
+        .side-project-col-wide p:last-child {
+          margin-bottom: 0;
+        }
+
+        .side-project-col-narrow {
+          padding-right: 4px;
+          width: 156px;
+        }
+
+        /* Get in touch */
+        .side-project-aside-title {
+          color: #CB2C18;
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 18px;
+          margin: 3px 0 10px;
+          text-transform: uppercase;
+        }
+
+        .side-project-aside-copy {
+          font-size: 15px;
+          line-height: 21px;
+          margin-bottom: 20px;
+        }
+
+        .side-project-aside-copy:last-child {
+          margin-bottom: 0;
+        }
+
+        .side-project-aside-title-alt {
+          font-size: 14px;
+          font-weight: normal;
+          line-height: 18px;
+          margin: 6px 0 22px;
+          text-transform: uppercase;
+        }
+
+        .recent-writing .side-project-aside-title {
+          margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+          color: #CB2C18;
+          display: flex;
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        .footer-title {
+          color: #CB2C18;
+          margin: 0;
+        }
+
+        .footer a {
+          color: #CB2C18;
+          margin-left: 8px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -570,6 +959,9 @@
             <path d="M25.9 79.3C39.9 79.3 53.7 70.3 53.7 56.1C53.7 43.3 43.8 36.8 31.1 32.6L24.2 30.3C15.3 27.3 10.6 22.3 10.6 14.3C10.6 5.9 17.2 0.999996 25 0.999996C35.5 0.999996 41.9 8.49999 49 27.9H49.6L45.1 0.399998H44.5L40.6 4.7C37.2 1.8 30.9 0.0999956 25.4 0.0999956C14 0.0999956 0.8 7 0.8 21.1C0.8 31.8 7.6 40.3 20.3 44.5L27.2 46.8C37.2 50.1 43.5 54.2 43.5 63.5C43.5 72.3 36.5 78.4 26.1 78.4C15.1 78.4 7.7 69.9 0.8 49.8H0.2L4.6 79H5.2L9.3 74.8C12.7 77.3 19.3 79.3 25.9 79.3ZM60.3438 78H87.1438V77H79.7438V45.5C79.7438 35.4 83.2438 31 89.5438 31C95.0438 31 98.7438 35 98.7438 45.5V77H91.3438V78H118.144V77H110.744V45.2C110.744 31.9 104.444 26.6 95.3438 26.6C87.7438 26.6 81.7438 30.2 79.7438 37.9V2.2H60.2438V3.2H67.7438V77H60.3438V78ZM141.995 64.3V33.9H156.895L161.795 27.8H141.995V16.4H141.595L119.595 33.4V33.9H129.995V66.8C129.995 77.1 135.695 78.9 142.195 78.9C149.195 78.9 155.695 75.2 159.295 71.2L158.795 70.6C156.595 72.4 153.095 73.6 150.195 73.6C145.295 73.6 141.995 71.4 141.995 64.3ZM183.718 79.3C191.418 79.3 197.018 75.3 198.818 68.2V78H218.218V77H210.818V27.8H191.618V28.8H198.818V60.4C198.818 70.5 195.418 74.9 189.318 74.9C184.018 74.9 180.418 70.9 180.418 60.4V27.8H160.918V28.8H168.418V60.7C168.418 74 174.718 79.3 183.718 79.3ZM221.184 78H247.984V77H240.584V45.5C240.584 35.4 244.084 31 250.384 31C255.884 31 259.584 35 259.584 45.5V77H252.184V78H278.984V77H271.584V45.2C271.584 31.9 265.284 26.6 256.184 26.6C248.584 26.6 242.584 30.2 240.584 37.9V2.2H221.084V3.2H228.584V77H221.184V78ZM281.535 78H308.335V77H300.935V2.2H281.435V3.2H288.935V77H281.535V78Z" fill="#CB2C18"/>
           </svg>
         </h1>
+        <nav class="nav nav--mobile">
+          <div><a href="">Design leader</a>, <a href="">food writer</a>, <a href="">consummate host</a></div>
+        </nav>
         <h2 class="main-subtitle">Head of Product Design, Wirecutter</h2>
         <div class="main-cols main-cols--present">
           <h3 class="date"><div>2017 – present</div></h3>

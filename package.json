@@ -5,6 +5,9 @@
   "repository": "git@github.com:kayluhb/orr.git",
   "author": "Caleb Brown <kayluhb@gmail.com>",
   "license": "MIT",
-  "private": false,
-  "dependencies": {}
+  "private": true,
+  "dependencies": {},
+  "scripts": {
+    "start": "python -m SimpleHTTPServer 4000"
+  }
 }
