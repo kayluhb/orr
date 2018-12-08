@@ -15,9 +15,9 @@
     <meta name="msapplication-config" content="/orr/browserconfig.xml">
     <meta name="theme-color" content="#fff7f6">
     <style>
-      * {
+/*      * {
         outline: 1px dotted green;
-      }
+      }*/
       /* Fonts */
       @font-face {
         font-display: auto;
@@ -147,6 +147,7 @@
       /* Main layout */
       .main-wrap {
         margin: 0 auto;
+        min-width: 320px;
         max-width: 1120px;
         padding: 0 40px;
       }
@@ -474,8 +475,12 @@
         font-size: 15px;
         font-weight: bold;
         line-height: 21px;
-        margin: 0 0 47px;
-        padding: 0 100px 0 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .side-projects-description  + .side-projects-description {
+        margin-bottom: 47px;
       }
 
       .side-projects-title {
@@ -561,9 +566,34 @@
         margin-left: 8px;
       }
 
+      @media (max-width: 940px) {
+        .main-cols {
+          flex-direction: column;
+        }
+
+        .main-cols--present {
+          margin-bottom: 32px;
+        }
+
+        .main-copy,
+        .main-col {
+          width: 100%;
+        }
+
+        .main-copy {
+          margin-bottom: 61px;
+        }
+
+        .secondary-copy {
+          padding: 5px 5px 32px 0;
+          width: 100%;
+        }
+      }
+
       @media (max-width: 750px) {
         body {
           background-image: url('overlay-mobile.png');
+          background-image: none;
         }
 
         .nav {
@@ -611,23 +641,6 @@
           letter-spacing: 0;
           line-height: normal;
           margin-bottom: 8px;
-        }
-
-        .main-cols {
-          flex-direction: column;
-        }
-
-        .main-cols--present {
-          margin-bottom: 32px;
-        }
-
-        .main-copy,
-        .main-col {
-          width: 100%;
-        }
-
-        .main-copy {
-          margin-bottom: 61px;
         }
 
         .main-copy p {
@@ -723,11 +736,6 @@
           margin-bottom: 5px;
         }
 
-        .secondary-copy {
-          padding: 5px 5px 32px 0;
-          width: 100%;
-        }
-
         .secondary-copy p {
           font-size: 23px;
           line-height: 30px;
@@ -770,125 +778,99 @@
 
         /* Side Projects */
         .side-projects-header {
-          display: flex;
-          height: 86px;
-          justify-content: space-between;
+          padding: 84px 20px 17px;
+          height: auto;
         }
 
         .side-projects-header-divider {
-          background: #CB2C18;
-          height: 3px;
-          margin-top: 37px;
-          width: calc(100% - 440px);
+          margin: 18px 8px 0 9px;
+          margin-top: 18px;
+          width: calc(100% - 220px);
         }
 
         .side-projects-header-side {
-          padding: 19px 10px 0 0;
-          text-align: right;
-          width: 176px;
+          padding: 0;
+          text-align: left;
+          width: auto;
+        }
+
+        .side-projects-header-side svg {
+          height: 35px;
+          width: 91px;
         }
 
         .side-projects-header-projects {
-          padding: 19px 0 0 10px;
-          width: 264px;
+          padding: 0;
+          width: auto;
+        }
+
+        .side-projects-header-projects svg {
+          height: 49px;
+          width: 171px;
         }
 
         .side-projects {
-          font-family: 'karla', sans-serif;
-          margin: 0 auto 165px;
-          max-width: 682px;
+          padding: 0 20px;
         }
 
         .side-projects-description {
-          color: #CB2C18;
-          font-size: 15px;
-          font-weight: bold;
-          line-height: 21px;
-          margin: 0 0 47px;
-          padding: 0 100px 0 0;
+          font-size: 16px;
+          line-height: 22px;
+          margin: 0 0 10px;
+          padding: 0;
         }
 
-        .side-projects-title {
-          color: #CB2C18;
-          font-size: 22px;
-          font-weight: bold;
-          line-height: 31px;
-          margin: 0 0 13px;
+        .side-projects-description + .side-projects-description {
+          margin-bottom: 50px;
         }
 
         .side-project-cols {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 64px;
+          flex-direction: column;
+          margin-bottom: 49px;
         }
 
         .side-project-col-wide {
-          width: 420px;
-        }
-
-        .side-project-col-wide p {
-          font-size: 17px;
-          line-height: 26px;
-          margin-bottom: 15px;
-        }
-
-        .side-project-col-wide p:last-child {
-          margin-bottom: 0;
+          margin-bottom: 50px;
+          width: 100%;
         }
 
         .side-project-col-narrow {
-          padding-right: 4px;
-          width: 156px;
+          width: 100%;
         }
 
         /* Get in touch */
-        .side-project-aside-title {
-          color: #CB2C18;
-          font-size: 14px;
-          font-weight: bold;
-          line-height: 18px;
-          margin: 3px 0 10px;
-          text-transform: uppercase;
-        }
-
         .side-project-aside-copy {
           font-size: 15px;
-          line-height: 21px;
-          margin-bottom: 20px;
+          line-height: 23px;
         }
 
-        .side-project-aside-copy:last-child {
-          margin-bottom: 0;
+        .side-project-aside-title--writing {
+          margin-bottom: 8px;
         }
 
-        .side-project-aside-title-alt {
-          font-size: 14px;
-          font-weight: normal;
-          line-height: 18px;
-          margin: 6px 0 22px;
-          text-transform: uppercase;
+        .recent-writing {
+          margin-top: -12px;
         }
 
         .recent-writing .side-project-aside-title {
-          margin-bottom: 0;
+          font-size: 15px;
+          line-height: 19px;
+        }
+
+        .side-project-aside-title-alt {
+          font-size: 15px;
+          line-height: 19px;
         }
 
         /* Footer */
         .footer {
-          color: #CB2C18;
-          display: flex;
-          font-size: 14px;
-          line-height: 20px;
-        }
-
-        .footer-title {
-          color: #CB2C18;
-          margin: 0;
+          font-size: 16px;
+          line-height: 22px;
+          padding-top: 41px;
         }
 
         .footer a {
-          color: #CB2C18;
-          margin-left: 8px;
+          margin-left: 9px;
         }
       }
     </style>
@@ -896,7 +878,7 @@
   <body>
     <div class="main-wrap">
       <nav class="nav">
-        <div><a href="">Design leader</a>, <a href="">food writer</a>, <a href="">consummate host</a></div>
+        <div><a href="#design-leader">Design leader</a>, <a href="#food-writer">food writer</a>, <a href="#consumate-host">consummate host</a></div>
       </nav>
       <main class="main">
         <h1 class="orr-shtuhl">
@@ -910,9 +892,9 @@
           </svg>
         </h1>
         <nav class="nav nav--mobile">
-          <div><a href="">Design leader</a>, <a href="">food writer</a>, <a href="">consummate host</a></div>
+          <div><a href="#design-leader">Design leader</a>, <a href="#food-writer">food writer</a>, <a href="#consumate-host">consummate host</a></div>
         </nav>
-        <h2 class="main-subtitle">Head of Product Design, Wirecutter</h2>
+        <h2 class="main-subtitle" id="design-leader">Head of Product Design, Wirecutter</h2>
         <div class="main-cols main-cols--present">
           <h3 class="date"><div>2017 – present</div></h3>
           <div class="main-copy">
@@ -1025,8 +1007,13 @@
       </div>
       </div>
       <div class="side-projects">
-        <p class="side-projects-description">I write and speak about food and drink — I especially love interviewing people. Lately I've been exploring the intersection of food and identity.</p>
-        <h2 class="side-projects-title">Hosting + speaking</h2>
+        <p class="side-projects-description">
+          I write and speak about food and drink — I especially love interviewing people.
+        </p>
+        <p class="side-projects-description">
+          Lately I've been exploring the intersection of food and identity.
+        </p>
+        <h2 class="side-projects-title" id="consumate-host">Hosting + speaking</h2>
         <div class="side-project-cols">
           <div class="side-project-col-wide">
             <p>
@@ -1046,7 +1033,7 @@
             </p>
           </div>
         </div>
-        <h2 class="side-projects-title">Writing</h2>
+        <h2 class="side-projects-title side-project-aside-title--writing" id="food-writer">Writing</h2>
         <div class="side-project-cols">
           <div class="side-project-col-wide">
             <p>
@@ -1086,6 +1073,20 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-592045-8');
+    </script>
+
+    <script>
+      var nodes = document.querySelectorAll('.nav a');
+      var links = Array.from(nodes);
+      function navClick(event) {
+        event.preventDefault();
+        var target = event.target.getAttribute('href').split('#').join('');
+        window.scroll({ top: document.getElementById(target).offsetTop, left: 0, behavior: 'smooth' });
+      }
+      // Add Event Listener to parent Element
+      links.forEach(link => {
+        link.addEventListener('click', navClick);
+      });
     </script>
   </body>
 </html>
