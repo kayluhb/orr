@@ -387,7 +387,7 @@
 
       /* Secondary aside */
       .work-title {
-        font-family: Karla;
+        font-family: Karla, sans-serif;
         font-size: 14px;
         font-weight: normal;
         line-height: 18px;
@@ -400,14 +400,14 @@
       }
 
       .client {
-        font-family: Karla;
+        font-family: Karla, sans-serif;
         font-size: 15px;
         margin-bottom: 22px;
       }
 
       .client-title {
         color: #CB2C18;
-        font-family: Karla;
+        font-family: Karla, sans-serif;
         font-size: 14px;
         font-weight: bold;
         line-height: 18px;
@@ -424,7 +424,7 @@
       }
 
       .past-subtitle {
-        font-family: Karla;
+        font-family: Karla, sans-serif;
         font-size: 12px;
         font-weight: normal;
         letter-spacing: 0.02em;
@@ -665,8 +665,9 @@
         /* Recognition */
         .recognition {
           border: 1px solid #000000;
+          border-bottom: 0;
           display: block;
-          padding: 60px 39px;
+          padding: 60px 39px 1px;
         }
 
         .recognition-title {
@@ -684,120 +685,87 @@
 
         /* Bar */
         .bar {
-          display: flex;
-          margin-bottom: 70px;
-          height: 36px;
-          width: calc(100% + 32px);
-          margin-left: -16px;
+          height: 20px;
+          margin: -20px 0 70px 0;
+          width: 100%;
         }
 
         .bar > :nth-child(1) {
-          border-bottom: 2px solid #111;
-          border-right: 2px solid #111;
-          height: 100%;
-          width: calc(100% - 428px);
+          border-bottom: 1px solid #111;
+          border-right: 1px solid #111;
+          width: calc(100% - 184px);
         }
 
         .bar > :nth-child(2) {
-          border-top: 2px solid #111;
-          height: 100%;
-          width: 110px;
+          border-top: 1px solid #111;
+          width: 55px;
         }
 
         .bar > :nth-child(3) {
-           height: 100%;
-           padding: 0 12px;
-           position: relative;
            width: 34px;
         }
 
         .bar > :nth-child(4) {
-          border-top: 2px solid #111;
-          height: 100%;
-          width: 110px;
+          border-top: 1px solid #111;
+          width: 55px;
         }
 
         .bar > :nth-child(5) {
-          border-bottom: 2px solid #111;
-          border-left: 2px solid #111;
-          height: 100%;
-          width: 194px;
-        }
-
-        .bar svg {
-           position: absolute;left: -2px;top: -19px;
+          border-bottom: 1px solid #111;
+          border-left: 1px solid #111;
+          width: 40px;
         }
 
         /* Secondary */
         .secondary-title {
-          font-size: 30px;
-          line-height: normal;
-          margin-bottom: 25px;
+          font-size: 34px;
+          letter-spacing: 0.015em;
+          margin-bottom: 5px;
         }
 
         .secondary-copy {
-          padding-bottom: 72px;
-          width: calc(100% - 338px);
+          padding: 5px 5px 32px 0;
+          width: 100%;
         }
 
         .secondary-copy p {
-          font-size: 22px;
-          letter-spacing: 0.01em;
-          line-height: 29px;
-          margin-bottom: 20px;
+          font-size: 23px;
+          line-height: 30px;
+          margin-bottom: 22px;
         }
 
         /* Secondary aside */
         .work-title {
-          font-family: Karla;
-          font-size: 14px;
-          font-weight: normal;
-          line-height: 18px;
-          margin-bottom: 22px;
-          text-transform: uppercase;
+          font-size: 15px;
+          line-height: 19px;
         }
 
         .selected-clients {
-          margin-bottom: 72px;
+          margin-bottom: 70px;
         }
 
         .client {
-          font-family: Karla;
           font-size: 15px;
-          margin-bottom: 22px;
+          margin-bottom: 20px;
         }
 
         .client-title {
-          color: #CB2C18;
-          font-family: Karla;
-          font-size: 14px;
-          font-weight: bold;
-          line-height: 18px;
-          margin-bottom: 2px;
-          text-transform: uppercase;
+          font-size: 15px;
+          line-height: 19px;
         }
 
         .past {
           margin-bottom: 21px;
         }
 
-        .past:last-child {
-          margin-bottom: 0;
-        }
-
         .past-subtitle {
-          font-family: Karla;
-          font-size: 12px;
-          font-weight: normal;
-          letter-spacing: 0.02em;
-          line-height: 15px;
-          margin: 0 0 3px;
+          font-size: 13px;
+          line-height: 17px;
         }
 
         .past-title {
-          font-size: 19px;
-          line-height: 25px;
-          margin: 0;
+          font-size: 20px;
+          line-height: 26px;
         }
 
         /* Side Projects */
