@@ -566,6 +566,27 @@
         margin-left: 8px;
       }
 
+      /* Link hover effects */
+      .footer a {
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .footer a::after {
+        background: #CB2C18;
+        content: '';
+        display: block;
+        height: 1px;
+        margin-top: -5px;
+        transition: width .2s ease-in-out;
+        width: 0;
+        width: 100%;
+      }
+
+      .footer a:hover::after {
+        width: 0;
+      }
+
       @media (max-width: 940px) {
         .main-cols {
           flex-direction: column;
@@ -921,18 +942,18 @@
           <div class="recognition-col">
             <h4 class="recognition-subtitle">SPOKEN AT</h4>
             <p>
-              <a href="http://google.com">Design Systems NYC</a><br>
-              <a href="http://google.com">Design Driven NYC</a><br>
-              <a href="http://google.com">SXSW</a>
+              <a href="http://google.com" target="_blank" rel="noreferrer noopener">Design Systems NYC</a><br>
+              <a href="http://google.com" target="_blank" rel="noreferrer noopener">Design Driven NYC</a><br>
+              <a href="http://google.com" target="_blank" rel="noreferrer noopener">SXSW</a>
             </p>
           </div>
           <div class="recognition-col">
             <h4 class="recognition-subtitle">Profiled IN</h4>
-            <p><a href="http://google.com">Fast Company</a></p>
+            <p><a href="https://www.fastcompany.com/3051797/why-your-companys-ux-director-should-be-a-beer-cheese-and-cocktails-exper" target="_blank" rel="noreferrer noopener">Fast Company</a></p>
           </div>
           <div class="recognition-col">
             <h4 class="recognition-subtitle">WRITTEN FOR</h4>
-            <p><a href="http://google.com">A List Apart</a></p>
+            <p><a href="https://alistapart.com/author/orr-shtuhl" target="_blank" rel="noreferrer noopener">A List Apart</a></p>
           </div>
         </section>
         <div class="bar" >
@@ -966,11 +987,11 @@
                 <h3 class="work-title">Selected Clients</h3>
                 <div class="client">
                   <h4 class="client-title">NYC Department of Education</h4>
-                  <a href="http://google.org">weteachnyc.org</a>
+                  <a href="http://weteachnyc.org" target="_blank" rel="noreferrer noopener">weteachnyc.org</a>
                 </div>
                 <div class="client">
                   <h4 class="client-title">Boston Logan Airport</h4>
-                  <a href="http://flylogan.com">flylogan.com</a>
+                  <a href="http://flylogan.com" target="_blank" rel="noreferrer noopener">flylogan.com</a>
                 </div>
                 <div class="client">
                   <h4 class="client-title">Yale Law School</h4>
@@ -1017,10 +1038,10 @@
         <div class="side-project-cols">
           <div class="side-project-col-wide">
             <p>
-              I host and moderate live talks. Past events, at The New York Times and the Brooklyn bookstore Archestratus, include <a href="">Bianca Bosker</a> and <a href="">Maira Kalman</a>.
+              I host and moderate live talks. Past events, at The New York Times and the Brooklyn bookstore Archestratus, include <a href="http://google.com" target="_blank" rel="noreferrer noopener">Bianca Bosker</a> and <a href="http://google.com" target="_blank" rel="noreferrer noopener">Maira Kalman</a>.
             </p>
             <p>
-              I also founded a beer tours company called <a href="http://www.thebestest.nyc/">The Bestest</a> and teach beverage pairing classes at Murray's Cheese. Once, I created and hosted a live, food-themed variety show called <a href="https://www.ediblebrooklyn.com/event/drinks-orr-shtuhl-first-beer/">Out For Drinks</a>.
+              I also founded a beer tours company called <a href="http://www.thebestest.nyc/" target="_blank" rel="noreferrer noopener">The Bestest</a> and teach beverage pairing classes at Murray's Cheese. Once, I created and hosted a live, food-themed variety show called <a href="https://www.ediblebrooklyn.com/event/drinks-orr-shtuhl-first-beer/" target="_blank" rel="noreferrer noopener">Out For Drinks</a>.
             </p>
             <p>
               When I lived in Washington, D.C., I ran Saint Bernard, a cocktail speakeasy, out of my actual home.
@@ -1037,7 +1058,7 @@
         <div class="side-project-cols">
           <div class="side-project-col-wide">
             <p>
-              I’ve published a book with Penguin called <a href="https://www.amazon.com/Illustrated-Guide-Cocktails-Classic-Cocktail/dp/1592407951">An Illustrated Guide to Cocktails</a>. Before that, I was the Washington City Paper's first beer columnist, a column I wrote for 4 years.
+              I’ve published a book with Penguin called <a href="https://www.amazon.com/Illustrated-Guide-Cocktails-Classic-Cocktail/dp/1592407951" target="_blank" rel="noreferrer noopener">An Illustrated Guide to Cocktails</a>. Before that, I was the Washington City Paper's first beer columnist, a column I wrote for 4 years.
             </p>
             <p>
               My writing has also appeared in The New York Times, The Forward, Gastronomica, Serious Eats, and NPR.
@@ -1047,23 +1068,23 @@
             <h3 class="side-project-aside-title-alt">Recent writing</h3>
             <h4 class="side-project-aside-title">NYT Magazine</h4>
             <p class="side-project-aside-copy">
-              <a href="https://www.nytimes.com/2018/01/04/magazine/letter-of-recommendation-floating.html">Floating + trauma</a>
+              <a href="https://www.nytimes.com/2018/01/04/magazine/letter-of-recommendation-floating.html" target="_blank" rel="noreferrer noopener">Floating + trauma</a>
             </p>
             <h4 class="side-project-aside-title">NYT Food</h4>
             <p class="side-project-aside-copy">
-              <a href="https://www.nytimes.com/2017/11/03/dining/drinks/thanksgiving-beer-food.html">Thanksgiving + beer</a>
+              <a href="https://www.nytimes.com/2017/11/03/dining/drinks/thanksgiving-beer-food.html" target="_blank" rel="noreferrer noopener">Thanksgiving + beer</a>
             </p>
             <h4 class="side-project-aside-title">The Forward</h4>
             <p class="side-project-aside-copy">
-              <a href="http://google.com">Hummus + identity</a>
+              <a href="http://google.com" target="_blank" rel="noreferrer noopener">Hummus + identity</a>
             </p>
           </div>
         </div>
         <footer class="footer">
           <h4 class="footer-title">Let’s talk!</h4>
           <a href="mailto:orrshtuhl@gmail.com?subject=Getting in touch from orrshtuhl.com">Email</a>
-          <a href="https://www.linkedin.com/in/orrshtuhl/">LinkedIn</a>
-          <a href="http://google.com">Resume</a>
+          <a href="https://www.linkedin.com/in/orrshtuhl/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+          <a href="http://google.com" target="_blank" rel="noreferrer noopener">Resume</a>
         </footer>
       </section>
     </div>
