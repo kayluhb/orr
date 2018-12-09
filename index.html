@@ -73,7 +73,6 @@
         -ms-overflow-style: -ms-autohiding-scrollbar;
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
         box-sizing: border-box;
         font-size: 100%;
         overflow-y: auto;
@@ -81,7 +80,7 @@
 
       body {
         -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
+        -webkit-font-smoothing: auto;
         background: #FFF7F6 center top no-repeat;
         background-image: url('overlay.png');
         background-image: none;
@@ -126,6 +125,7 @@
       /* Nav */
       .nav {
         align-items: flex-end;
+        color: #CB2C18;
         display: flex;
         font-family: 'karla', sans-serif;
         font-size: 14px;
@@ -189,7 +189,7 @@
 
       .main-subtitle {
         font-size: 39px;
-        font-weight: normal;
+        font-weight: bold;
         letter-spacing: 0.015em;
         line-height: 1;
       }
@@ -285,6 +285,7 @@
 
       .recognition-title {
         font-size: 46px;
+        font-weight: normal;
         font-style: italic;
         line-height: 41px;
         margin-right: 24px;
@@ -565,27 +566,6 @@
       .footer a {
         color: #CB2C18;
         margin-left: 8px;
-      }
-
-      /* Link hover effects */
-      .footer a {
-        display: inline-block;
-        text-decoration: none;
-      }
-
-      .footer a::after {
-        background: #CB2C18;
-        content: '';
-        display: block;
-        height: 1px;
-        margin-top: -5px;
-        transition: width .2s ease-in-out;
-        width: 0;
-        width: 100%;
-      }
-
-      .footer a:hover::after {
-        width: 0;
       }
 
       @media (max-width: 940px) {
@@ -921,7 +901,7 @@
           <h3 class="date"><div>2017 – present</div></h3>
           <div class="main-copy">
             <p>
-              I provide leadership, strategy, and hands-on design to shape the user experience of Wirecutter.com. I was the company's first product designer, and I built the team from the ground up.
+              I provide leadership, strategy, and hands-on design to shape the user experience of Wirecutter.com, a New York Times company. I was the company's first product designer, and I built the team from the ground up.
             </p>
             <p>
               Day to day, I collaborate with product, tech, and editorial to define and execute on our vision for the company. I gather requirements, conduct research, and (on a good day) contribute designs.
@@ -943,9 +923,9 @@
           <div class="recognition-col">
             <h4 class="recognition-subtitle">SPOKEN AT</h4>
             <p>
-              <a href="http://google.com" target="_blank" rel="noreferrer noopener">Design Systems NYC</a><br>
-              <a href="http://google.com" target="_blank" rel="noreferrer noopener">Design Driven NYC</a><br>
-              <a href="http://google.com" target="_blank" rel="noreferrer noopener">SXSW</a>
+              <a href="https://designsystems.nyc/" target="_blank" rel="noreferrer noopener">Design Systems NYC</a><br>
+              <a href="http://firstmarkcap.com/insights/redesign-rebranding-the-wirecutter-a-case-study/" target="_blank" rel="noreferrer noopener">Design Driven NYC</a><br>
+              SXSW
             </p>
           </div>
           <div class="recognition-col">
@@ -954,7 +934,7 @@
           </div>
           <div class="recognition-col">
             <h4 class="recognition-subtitle">WRITTEN FOR</h4>
-            <p><a href="https://alistapart.com/author/orr-shtuhl" target="_blank" rel="noreferrer noopener">A List Apart</a></p>
+            <p><a href="https://alistapart.com/article/looking-for-trouble" target="_blank" rel="noreferrer noopener">A List Apart</a></p>
           </div>
         </section>
         <div class="bar" >
@@ -1039,7 +1019,7 @@
         <div class="side-project-cols">
           <div class="side-project-col-wide">
             <p>
-              I host and moderate live talks. Past events, at The New York Times and the Brooklyn bookstore Archestratus, include <a href="http://google.com" target="_blank" rel="noreferrer noopener">Bianca Bosker</a> and <a href="http://google.com" target="_blank" rel="noreferrer noopener">Maira Kalman</a>.
+              I host and moderate live talks. Past events, at The New York Times and the Brooklyn bookstore Archestratus, include <a href="http://www.biancabosker.com/" target="_blank" rel="noreferrer noopener">Bianca Bosker</a> and <a href="https://www.mairakalman.com/" target="_blank" rel="noreferrer noopener">Maira Kalman</a>.
             </p>
             <p>
               I also founded a beer tours company called <a href="http://www.thebestest.nyc/" target="_blank" rel="noreferrer noopener">The Bestest</a> and teach beverage pairing classes at Murray's Cheese. Once, I created and hosted a live, food-themed variety show called <a href="https://www.ediblebrooklyn.com/event/drinks-orr-shtuhl-first-beer/" target="_blank" rel="noreferrer noopener">Out For Drinks</a>.
@@ -1051,7 +1031,7 @@
           <div class="side-project-col-narrow">
             <h3 class="side-project-aside-title">Get in touch</h3>
             <p class="side-project-aside-copy">
-              I’m available for hosting, moderating, and all manner of beer tasting and tours. If you’re interested in putting together an event, <a href="mailto:orrshtuhl@gmail.com?subject=Getting in touch from orrshtuhl.com">just send me an email</a>.
+              I’m available for hosting, moderating, and all manner of beer tasting and tours. If you’re interested in putting together an event, <a href="mailto:orrshtuhl@gmail.com?subject=Hi Orr!">just send me an email</a>.
             </p>
           </div>
         </div>
@@ -1077,13 +1057,13 @@
             </p>
             <h4 class="side-project-aside-title">The Forward</h4>
             <p class="side-project-aside-copy">
-              <a href="http://google.com" target="_blank" rel="noreferrer noopener">Hummus + identity</a>
+              Hummus + identity (January 2019)
             </p>
           </div>
         </div>
         <footer class="footer">
           <h4 class="footer-title">Let’s talk!</h4>
-          <a href="mailto:orrshtuhl@gmail.com?subject=Getting in touch from orrshtuhl.com">Email</a>
+          <a href="mailto:orrshtuhl@gmail.com?subject=Hi Orr!">Email</a>
           <a href="https://www.linkedin.com/in/orrshtuhl/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
           <a href="http://google.com" target="_blank" rel="noreferrer noopener">Resume</a>
         </footer>
