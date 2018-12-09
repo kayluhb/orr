@@ -325,6 +325,32 @@
         width: 16px;
       }
 
+      @keyframes recognition-icon {
+        0% {
+          transform: scale(1);
+        }
+        25% {
+          top: -20px;
+          transform: scale(1.5);
+        }
+        50% {
+          top: -15px;
+          transform: scale(1);
+        }
+        75% {
+          top: -17px;
+          transform: scale(1.2);
+        }
+        100% {
+          top: -15px;
+          transform: scale(1);
+        }
+      }
+
+      .recognition-title:hover .recognition-title-icon {
+        animation: .8s recognition-icon;
+      }
+
       .recognition-col {
         margin-top: -8px;
         width: 158px;
@@ -354,12 +380,12 @@
 
       .bar > :nth-child(1) {
         border-bottom: 2px solid #111;
-        border-right: 2px solid #111;
         height: 100%;
         width: calc(100% - 428px);
       }
 
       .bar > :nth-child(2) {
+        border-left: 2px solid #111;
         border-top: 2px solid #111;
         height: 100%;
         width: 110px;
@@ -373,6 +399,7 @@
       }
 
       .bar > :nth-child(4) {
+        border-right: 2px solid #111;
         border-top: 2px solid #111;
         height: 100%;
         width: 110px;
@@ -380,13 +407,47 @@
 
       .bar > :nth-child(5) {
         border-bottom: 2px solid #111;
-        border-left: 2px solid #111;
         height: 100%;
         width: 194px;
       }
 
       .bar svg {
-         position: absolute;left: -2px;top: -19px;
+        display: block;
+        left: -2px;
+        position: absolute;
+        transition: transform .2s ease-in-out;
+        top: -19px;
+      }
+
+      @keyframes bar-icon {
+        0% {
+          top: -19px;
+          transform: scaleX(1);
+        }
+        20% {
+          top: -22px;
+          transform: scaleX(-1);
+        }
+        40% {
+          top: -19px;
+          transform: scaleX(1);
+        }
+        60% {
+          top: -22px;
+          transform: scaleX(-1);
+        }
+        80% {
+          top: -19px;
+          transform: scaleX(1);
+        }
+        100% {
+          top: -22px;
+          transform: scaleX(-1);
+        }
+      }
+
+      .bar > :nth-child(3):hover svg {
+        animation: 1.5s bar-icon infinite;
       }
 
       /* Secondary */
@@ -734,11 +795,11 @@
 
         .bar > :nth-child(1) {
           border-bottom: 1px solid #111;
-          border-right: 1px solid #111;
           width: calc(100% - 184px);
         }
 
         .bar > :nth-child(2) {
+          border-left: 1px solid #111;
           border-top: 1px solid #111;
           width: 55px;
         }
@@ -748,13 +809,13 @@
         }
 
         .bar > :nth-child(4) {
+          border-right: 1px solid #111;
           border-top: 1px solid #111;
           width: 55px;
         }
 
         .bar > :nth-child(5) {
           border-bottom: 1px solid #111;
-          border-left: 1px solid #111;
           width: 40px;
         }
 
