@@ -446,12 +446,14 @@
         display: flex;
         height: 86px;
         justify-content: space-between;
+        position: relative;
+        z-index: 1;
       }
 
       .side-projects-header-divider {
         background: #CB2C18;
         height: 3px;
-        margin-top: 37px;
+        margin-top: -3px;
         width: calc(100% - 440px);
       }
 
@@ -701,7 +703,7 @@
         /* Bar */
         .bar {
           height: 20px;
-          margin: -20px 0 70px 0;
+          margin: -35px 0 70px 0;
           width: 100%;
         }
 
@@ -993,14 +995,14 @@
         </section>
       </main>
     </div>
-    <div class="main-wrap side-projects-header">
+    <div class="main-wrap side-projects-header" id="side-projects">
       <div class="side-projects-header-side">
         <svg width="96" height="37" viewBox="0 0 96 37" fill="none">
           <title>Side</title>
             <path d="M12.5763 36.598C19.0163 36.598 25.3643 32.458 25.3643 25.926C25.3643 20.038 20.8103 17.048 14.9683 15.116L11.7943 14.058C7.70034 12.678 5.53834 10.378 5.53834 6.698C5.53834 2.834 8.57434 0.579998 12.1623 0.579998C16.9923 0.579998 19.9363 4.03 23.2023 12.954H23.4783L21.4083 0.303999H21.1323L19.3383 2.282C17.7743 0.947999 14.8763 0.165998 12.3463 0.165998C7.10234 0.165998 1.03034 3.34 1.03034 9.826C1.03034 14.748 4.15834 18.658 10.0003 20.59L13.1743 21.648C17.7743 23.166 20.6723 25.052 20.6723 29.33C20.6723 33.378 17.4523 36.184 12.6683 36.184C7.60834 36.184 4.20434 32.274 1.03034 23.028H0.754344L2.77834 36.46H3.05434L4.94034 34.528C6.50434 35.678 9.54034 36.598 12.5763 36.598ZM35.0445 7.342C36.9765 7.342 38.5405 5.824 38.5405 3.846C38.5405 1.868 36.9765 0.349998 35.0445 0.349998C33.0665 0.349998 31.5485 1.868 31.5485 3.846C31.5485 5.824 33.0665 7.342 35.0445 7.342ZM37.9425 12.218L29.0185 15.852V16.036L32.4225 18.106V35.54H29.0185V36H41.3465V35.54H37.9425V12.218ZM54.0676 36.598C57.3336 36.598 59.7716 34.804 61.0596 32.228V36H69.9836V35.54H66.5796V1.132H56.5976V1.592H61.0596V16.174C59.9556 13.966 57.4256 12.356 54.4816 12.356C49.1456 12.356 43.9016 17.002 43.9016 24.5C43.9016 32.412 49.1456 36.598 54.0676 36.598ZM56.7816 34.482C53.1016 34.482 50.2956 30.756 50.2956 24.132C50.2956 17.186 53.5616 14.196 56.6896 14.196C58.5756 14.196 60.4616 15.208 61.0596 17.094V31.308C60.4156 33.102 58.7596 34.482 56.7816 34.482ZM84.2929 36.598C90.1809 36.598 94.6429 33.47 95.6089 25.65H95.2409C93.8609 31.584 89.7669 32.78 86.6389 32.78C81.3489 32.78 77.8069 28.226 77.8069 21.74C77.8069 21.142 77.8529 20.59 77.8989 20.038H94.5509C92.8949 13.874 88.1109 12.356 84.1549 12.356C78.0369 12.356 72.4709 17.324 72.4709 24.592C72.4709 32.09 77.6229 36.598 84.2929 36.598ZM83.8789 12.77C87.0529 12.77 88.2949 15.53 88.2949 17.14C88.2949 18.98 87.5589 19.532 84.5689 19.532H77.9449C78.5429 15.07 80.8889 12.77 83.8789 12.77Z" fill="#CB2C18"/>
         </svg>
       </div>
-      <div class="side-projects-header-divider"></div>
+      <div class="side-projects-header-divider" id="side-projects-divider"></div>
       <div class="side-projects-header-projects">
         <svg width="186" height="49" viewBox="0 0 186 49" fill="none">
           <title>Projects</title>
@@ -1088,6 +1090,20 @@
       links.forEach(link => {
         link.addEventListener('click', navClick);
       });
+
+      var sideProjects = document.getElementById('side-projects');
+      var sideProjectDivider = document.getElementById('side-projects-divider');
+      function scrollTop() {
+        return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      }
+
+      function onScroll(event) {
+        var min = window.innerWidth <= 750 ? 18 : 37;
+        var marginTop = Math.max((scrollTop() - sideProjects.offsetTop) + (window.innerHeight / 4), -3);
+        marginTop = Math.min(min, marginTop);
+        sideProjectDivider.style.marginTop = marginTop + 'px';
+      }
+      window.addEventListener('scroll', onScroll);
     </script>
   </body>
 </html>
