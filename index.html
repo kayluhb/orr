@@ -260,33 +260,12 @@
         height: 5px;
         position: absolute;
         top: -13px;
-        width: 18px;
+        width: 0;
         transition: width .4s ease-in-out;
       }
 
-      @keyframes aside-icon {
-        0% {
-          margin-left: 0;
-          width: 18px;
-        }
-        25% {
-          margin-left: 0;
-          width: 80%;
-        }
-        50% {
-          margin-left: 80%;
-          width: 0;
-        }
-        51% {
-          margin-left: 0;
-        }
-        100% {
-          width: 18px;
-        }
-      }
-
-      .aside:hover .aside-title-icon {
-        animation: 1s aside-icon;
+      .aside-title.on .aside-title-icon {
+        width: 18px;
       }
 
       .aside-copy {
@@ -329,26 +308,18 @@
         0% {
           transform: scale(1);
         }
-        25% {
+        66% {
           top: -20px;
-          transform: scale(1.4);
-        }
-        50% {
-          top: -13px;
-          transform: scale(1);
-        }
-        75% {
-          top: -17px;
           transform: scale(1.2);
         }
         100% {
-          top: -15px;
+          top: -13px;
           transform: scale(1);
         }
       }
 
-      .recognition-title:hover .recognition-title-icon {
-        animation: .8s recognition-icon;
+      .recognition-title.on .recognition-title-icon {
+        animation: .4s recognition-icon;
       }
 
       .recognition-col {
@@ -418,7 +389,7 @@
         transition: transform .2s ease-in-out;
         top: -19px;
       }
-
+/*
       @keyframes bar-icon {
         0% {
           top: -19px;
@@ -436,7 +407,7 @@
 
       .bar > :nth-child(3):hover svg {
         animation: .7s bar-icon infinite;
-      }
+      }*/
 
       /* Secondary */
       .secondary-title {
@@ -993,7 +964,7 @@
             </p>
           </div>
           <div class="main-col aside">
-            <h4 class="icon-title aside-title">
+            <h4 class="icon-title aside-title" id="aside-title">
               <div class="aside-title-icon"></div>
               I blend journalism and design
             </h4>
@@ -1001,7 +972,7 @@
           </div>
         </div>
         <section class="recognition">
-          <h2 class="icon-title recognition-title">
+          <h2 class="icon-title recognition-title" id="recognition-title">
             <svg class="recognition-title-icon" width="16" height="9">
               <path d="M.932 3.144l1.523 5.14A1 1 0 0 0 3.413 9h9.174a1 1 0 0 0 .959-.716l1.523-5.14c.28-.947-.835-1.684-1.596-1.055l-1.386 1.145a1 1 0 0 1-1.393-.117L8.757.876a1 1 0 0 0-1.514 0L5.306 3.117a1 1 0 0 1-1.393.117L2.527 2.089C1.767 1.46.651 2.197.932 3.144z" fill="#CB2C18"/>
             </svg>
@@ -1176,11 +1147,11 @@
         link.addEventListener('click', navClick);
       });
 
+      // Flourishes
+      var aside = document.getElementById('aside-title');
+      var recognition = document.getElementById('recognition-title');
       var sideProjects = document.getElementById('side-projects');
       var sideProjectDivider = document.getElementById('side-projects-divider');
-      function scrollTop() {
-        return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      }
 
       function addClass(el, className) {
         if (el === null) {
@@ -1203,18 +1174,34 @@
         if (el.classList) {
           el.classList.remove(className);
         } else {
-          const regex = new RegExp(`(^|\\b)${className.split(' ').join('|')}(\\b|$)`, 'gi');
+          var regex = new RegExp(`(^|\\b)${className.split(' ').join('|')}(\\b|$)`, 'gi');
           el.className = el.className.replace(regex, ' ');
         }
         return el;
       }
 
       function onScroll(event) {
-        if (scrollTop() > sideProjects.offsetTop - (window.innerHeight / 3)) {
-          addClass(sideProjectDivider, 'on');
-        } else {
-          removeClass(sideProjectDivider, 'on');
+        var on = 'on';
+        var half = window.innerHeight / 2;
+
+        if (aside.getBoundingClientRect().top < half) {
+          addClass(aside, on);
+          } else {
+          removeClass(aside, on);
         }
+
+        if (recognition.getBoundingClientRect().top < half) {
+          addClass(recognition, on);
+        } else {
+          removeClass(recognition, on);
+        }
+
+        if (sideProjects.getBoundingClientRect().top < half) {
+          addClass(sideProjectDivider, on);
+        } else {
+          removeClass(sideProjectDivider, on);
+        }
+
         // var min = window.innerWidth <= 750 ? 18 : 37;
         // var marginTop = Math.max((scrollTop() - sideProjects.offsetTop) + (window.innerHeight / 3), -3);
         // marginTop = Math.min(min, marginTop);
